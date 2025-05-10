@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #231bb5, #ec0808); /* dark gradient */
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1e293b;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #949596;
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  padding: 40px 50px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin: 20px 0;
+  padding-right: 20px;
+  scroll-behavior: smooth;
+}
+
+.message {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  max-width: 75%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+.user {
+  background-color: #6366f1; /* indigo */
+  color: rgb(167, 253, 189);
+  margin-left: auto;
+  text-align: right;
+}
+
+.bot {
+  background-color: #e0e7ff; /* soft indigo background */
+  color: #1e293b;
+  margin-right: auto;
+  text-align: left;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background: #f1f5f9;
+  font-size: 1.1rem;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #6366f1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background-color: #4338ca;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.checkbox-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  border: 2px solid #f7f8fa;
+  border-radius: 8px;
+  background-color: #3c98e8;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 1em;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.checkbox-button input[type="checkbox"] {
+  accent-color: #007bff;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+}
+
+.checkbox-button:hover {
+  background-color: #e0efff;
+}
+
+.checkbox-button input[type="checkbox"]:checked + span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Typing indicator (optional) */
+.typing-indicator {
+  width: 50px;
+  height: 20px;
+  background: #e0e7ff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.typing-indicator::before,
+.typing-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #6366f1;
+  border-radius: 50%;
+  animation: bounce 1s infinite alternate;
+}
+
+.typing-indicator::after {
+  left: 20px;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(-50%) scale(1); }
+  100% { transform: translateY(-80%) scale(1.2); }
+}
+
+/* Fade animation for message appearance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .chat-container {
+    width: 95%;
+    height: 90vh;
+    padding: 20px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input, button {
+    width: 100%;
+  }
+}

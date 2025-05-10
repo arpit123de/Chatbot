@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<form action="/" method="post">
+  <div class="chat-container">
+    <div class="messages" id="messages">
+      <div class="message bot">Hello! How can I help you today?</div>
+    </div>
+
+    <div class="input-container2" style="overflow: auto;height: 500px;">
+      {{ result }}
+    </div>
+
+    <div class="input-container">
+      <input type="text" id="userInput2" name="userInput2" placeholder="Type your message or city..." />
+      
+      <label class="checkbox-button">
+        <input type="checkbox" name="weatherOnly" id="weatherOnly">
+        <span>Weather Only</span>
+      </label>
+      
+
+      <button type="submit">Send</button>
+    </div>
+  </div>
+</form>
+
