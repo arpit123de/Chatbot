@@ -32,5 +32,5 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 
-live project link
+#live project link
 https://chatbot-ktxz.onrender.com 
