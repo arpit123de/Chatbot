@@ -16,6 +16,10 @@ A simple and intelligent chatbot that can understand user input and respond acco
 - Flask (for web interface) or Tkinter (for desktop GUI)
 - HTML/CSS/JS (if web-based)
 
+  # live project link
+https://chatbot-ktxz.onrender.com 
+
+
 ## 📦 Installation
 
 # Clone the repository
@@ -32,5 +36,3 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 
-# live project link
-https://chatbot-ktxz.onrender.com 
