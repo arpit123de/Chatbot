@@ -1,4 +1,4 @@
-📘 ChatBotify
+📘 ChatBot
 An intelligent and customizable chatbot built to provide automated responses for customer support, FAQs, or general conversation. Ideal for developers and businesses looking to integrate AI-driven chat solutions into their platforms.
 
 🚀 Features
