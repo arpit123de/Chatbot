@@ -35,4 +35,9 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
+## Screenshot
+![App Screenshot](images/![Screenshot 2025-05-24 125023](https://github.com/user-attachments/assets/3681daaf-0960-4c6d-b8ec-fdd4aab7ab8c)
+
+
+
 
